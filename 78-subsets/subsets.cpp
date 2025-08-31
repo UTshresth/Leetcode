@@ -1,6 +1,6 @@
 class Solution {
     int x=0;
- void subseq(int x,vector<int> &a,vector<int> b,vector<vector<int>> &y){
+ void subseq(int x,vector<int> &a,vector<int> &b,vector<vector<int>> &y){
 
         if(x>=b.size()){
             y.push_back(a);
