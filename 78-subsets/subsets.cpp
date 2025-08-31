@@ -19,9 +19,9 @@ public:
     vector<vector<int>> subsets(vector<int>& nums) {
         vector <int> v;
         vector<vector<int>> ans;
-        int z=0;
+        int x=0;
 
-    subseq(z,v,nums,ans);
+    subseq(x,v,nums,ans);
     return ans;
         
 
