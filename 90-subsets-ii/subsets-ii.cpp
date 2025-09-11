@@ -3,7 +3,7 @@ class Solution {
  void subseq(int x,vector<int> &a,vector<int> &b,vector<vector<int>> &y){
 
         if(x>=b.size()){
-           if(find(y.begin(),y.end(),a)==y.end())
+           
             y.push_back(a);
             return;
             }
@@ -11,7 +11,8 @@ class Solution {
 
          subseq(x+1,a,b,y);
          a.pop_back();
-         subseq(x+1,a,b,y);
+         while(x+1<b.size()&&b[x]==b[x+1]) x++;
+                 subseq(x+1,a,b,y);
 
 
  }
