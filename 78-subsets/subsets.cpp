@@ -1,17 +1,16 @@
 class Solution {
-    int x=0;
+
  void subseq(int x,vector<int> &a,vector<int> &b,vector<vector<int>> &y){
 
-        if(x>=b.size()){
-            y.push_back(a);
-            return;
-            }
-            a.push_back(b[x]);
+       y.push_back(a);
+         
+         for(int i=x;i<b.size();i++) {
+              a.push_back(b[i]);
 
-         subseq(x+1,a,b,y);
-         a.pop_back();
-         subseq(x+1,a,b,y);
-
+                 subseq(i+1,a,b,y);
+                      a.pop_back();
+        
+         }
 
  }
     
