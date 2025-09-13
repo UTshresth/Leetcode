@@ -1,6 +1,6 @@
 class Solution {
 
-     void sol(string s,vector<string> &w,int k,int n){
+     void sol(string s,vector <string> &w,int k,int &n){
           
           if(k==n){
               w.push_back(s);
