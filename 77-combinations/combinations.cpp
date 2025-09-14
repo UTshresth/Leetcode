@@ -7,9 +7,8 @@ void sol( int n,int k,int v,vector<int> &a,vector<vector<int>> &ans){
                         ans.push_back(a);
                         return;
                     }
-                  if(v>n) {
-                    return;
-                  } 
+                    if ((n - v + 1) < (k - a.size())) return;
+                 
       a.push_back(v);
         
         sol(n,k,v+1,a,ans);
