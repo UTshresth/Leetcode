@@ -24,7 +24,7 @@ public:
                         d++;
                     }
                    
-                   
+
                     h1=h1-d;
                 }
 
@@ -32,11 +32,11 @@ public:
             if(h1<0) low=mid+1;
             if(h1>=0){
                 high=mid-1;
-                ans=min(mid,ans);
+       
             }
 
         }
-    return ans;
+    return high+1;
         
     }
 };
