@@ -1,9 +1,9 @@
 class Solution {
 public:
 
-    void  sol(vector<vector<int>> &ans,vector<int> &a,vector<int> &b,vector<int>&m){
+    void  sol(vector<vector<int>> &ans,vector<int> &a,vector<int> &b,vector<int>&m,int k){
 
-                if(a.size()==b.size())
+                if(k==b.size())
                 {
                     ans.push_back(a);
                     return;
@@ -13,7 +13,7 @@ public:
             if(m[i]==0){
                 m[i]=1;
                    a.push_back(b[i]);
-                   sol(ans,a,b,m);
+                   sol(ans,a,b,m,k+1);
                    a.pop_back();
                    m[i]=0;
 
@@ -27,8 +27,9 @@ public:
 
 vector<vector<int> >ans;
 vector<int> a;
+int k=0;
 vector<int>m(nums.size(),0);
-sol(ans,a,nums,m);
+sol(ans,a,nums,m,k);
 return ans;
     }  
 };
